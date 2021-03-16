@@ -1,0 +1,84 @@
+html {
+  min-width: 360px;
+  scroll-behavior: smooth;
+  @apply focus:outline-none;
+}
+
+::selection {
+  background-color: #47a3f3;
+  color: #fefefe;
+}
+
+body {
+  @apply font-medium text-blue-900 bg-gray-100;
+  @apply bg-gradient-to-r from-blue-50 via-blue-100 to-blue-100;
+  @apply dark:from-rose-900 dark:via-blue-900 dark:to-green-900 dark:text-gray-300 dark:bg-gray-900;
+}
+
+/*#__next {*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  min-height: 100vh;*/
+/*}*/
+
+::selection {
+  @apply text-white bg-blue-600;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: optional;
+  src: url(/fonts/inter-var-latin.woff2) format("woff2");
+  unicode-range: U+0400-04FF, U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC,
+    U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+h2 {
+  @apply text-xl font-bold;
+}
+
+h3 {
+  @apply text-lg font-bold;
+}
+
+button {
+  @apply transition transform-gpu hover:ring-opacity-50 focus:outline-none;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="url"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="search"],
+input[type="tel"],
+input[type="checkbox"],
+input[type="radio"],
+select,
+select[multiple],
+textarea {
+}
+
+input[type="text"] {
+  @apply text-lg placeholder-blue-900 placeholder-opacity-80 bg-gray-100 rounded border-none focus:border-black;
+}
+
+input[type="radio"] {
+  @apply w-6 h-6;
+}
+
+svg {
+  @apply text-blue-600;
+}
+
+select {
+  @apply font-medium;
+}

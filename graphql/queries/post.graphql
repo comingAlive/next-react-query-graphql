@@ -1,0 +1,17 @@
+query Post($id: Int!) {
+  post(where: { id: $id }) {
+    id
+    title
+    content
+    published
+    author {
+      id
+      name
+      email
+      posts {
+        id
+      }
+    }
+    __typename
+  }
+}
