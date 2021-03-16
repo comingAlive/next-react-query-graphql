@@ -2,15 +2,17 @@ import Container from "@/components/Container";
 import Form from "@/components/Form";
 import HalfStarIcon from "@/components/icons/HalfStarIcon";
 import StarIcon from "@/components/icons/StarIcon";
-import { client } from "@/lib/swr";
+// import {client} from "@/lib/swr";
 import Image from "next/image";
 import { usePostQuery } from "../src/generated/graphql";
 
 function Index() {
   // const { data } = usePost("post", { id: 1 });
 
-  const {data} = usePostQuery(client, { id: 1 });
-  // const { data } = usePostQuery();
+  const [{data}] = usePostQuery({ variables: { id: 1 } });
+
+  // const {data} = usePostQuery(client, { id: 1 });
+  // const { data } = usePostQuery({ variables: { id: 1 } });
 
   return (
     <Container>

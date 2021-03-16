@@ -6,11 +6,13 @@ generates:
     plugins:
       - typescript
       - typescript-operations
-#      - typescript-graphql-request
-      - typescript-react-query
+      - typescript-urql
+    #      - typescript-react-apollo
+    #      - typescript-graphql-request
+    #      - typescript-react-query
     #      - plugin-typescript-swr
-    config:
-      fetcher: graphql-request
+#    config:
+#      fetcher: graphql-request
   ./graphql.schema.json:
     plugins:
       - "introspection"
