@@ -1,31 +1,15 @@
-import "@/styles/base.css";
-import "@/styles/global.css";
-import "@/styles/utils.css";
-import { createClient } from "@urql/core";
-// import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
-import { ThemeProvider } from "next-themes";
-import { Provider } from "urql";
-// import { QueryClient, QueryClientProvider } from "react-query";
+import { AppProps } from "next/app";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { Hydrate } from "react-query/hydration";
 
-// const queryClient = new QueryClient();
+const queryClient = new QueryClient();
 
-function MyApp({ Component, pageProps }) {
-  // const client = new ApolloClient({
-  //   uri: "http://localhost:4000/graphql",
-  //   cache: new InMemoryCache(),
-  // });
-
-  const client = createClient({
-    url: "http://localhost:4000/graphql",
-  });
-
-  return (
-    <Provider value={client}>
-      <ThemeProvider attribute="class">
-        <Component {...pageProps} />
-      </ThemeProvider>
-    </Provider>
-  );
-}
+const MyApp = ({ Component, pageProps }: AppProps) => (
+  <QueryClientProvider client={queryClient}>
+    <Hydrate state={pageProps.dehydratedState}>
+      <Component {...pageProps} />
+    </Hydrate>
+  </QueryClientProvider>
+);
 
 export default MyApp;

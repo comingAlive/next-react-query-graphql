@@ -1,0 +1,5 @@
+query GetLaunches {
+  launchesPast(limit: 1) {
+    mission_name
+  }
+}

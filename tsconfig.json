@@ -1,17 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@/components/*": ["components/*"],
-      "@/lib/*": ["lib/*"],
-      "@/graphql/*": ["graphql/*"],
-      "@/styles/*": ["styles/*"],
-      "@/context/*": ["context/*"],
-      "@/locales/*": ["locales/*"],
-      "@/hooks/*": ["hooks/*"],
-      "@/data/*": ["data/*"]
-    },
-    "target": "esnext",
+    "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -22,7 +11,6 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "removeComments": true,
     "isolatedModules": true,
     "jsx": "preserve"
   },

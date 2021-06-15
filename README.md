@@ -1,10 +1,3 @@
-# Next.js Prisma Starter.
+# TypeScript Next.js React Query GraphQL
 
-Next.js All-in-One starter.
-
-## Specification
-
-- Next 10.0
-- React 17.0
-- Tailwind CSS 2.0
-- TypeScript 4.0
+This is a really simple project that shows the usage of Next.js with React Query and GraphQL Code Generator.
